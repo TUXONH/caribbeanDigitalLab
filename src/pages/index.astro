@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import PortfolioSection from '../components/PortfolioSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Footer from '../components/Footer.astro';
+
+import esTranslations from '../i18n/es.json';
+import enTranslations from '../i18n/en.json';
+import { projects } from '../data/portfolio';
+---
+
+<Layout>
+  <Navbar />
+
+  <main>
+    <HeroSection />
+    <ServicesSection />
+    <PortfolioSection />
+    <AboutSection />
+    <ContactSection />
+  </main>
+
+  <Footer />
+
+  <!-- i18n runtime: swap text for all [data-i18n] elements -->
+  <script define:vars={{ esTranslations, enTranslations, portfolioProjects: projects }}>
+    function getNestedValue(obj, path) {
+      return path.split('.').reduce((acc, key) => acc?.[key], obj);
+    }
+
+    function applyTranslations(lang) {
+      const translations = lang === 'en' ? enTranslations : esTranslations;
+
+      // Standard data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        const value = getNestedValue(translations, key);
+        if (value && typeof value === 'string') {
+          el.textContent = value;
+        }
+      });
+
+      // Portfolio industry badges
+      document.querySelectorAll('[data-i18n-portfolio-industry]').forEach((el) => {
+        const id = el.getAttribute('data-i18n-portfolio-industry');
+        const project = portfolioProjects.find((p) => p.id === id);
+        if (project) {
+          el.textContent = project.industry[lang];
+        }
+      });
+
+      // Portfolio descriptions
+      document.querySelectorAll('[data-i18n-portfolio-desc]').forEach((el) => {
+        const id = el.getAttribute('data-i18n-portfolio-desc');
+        const project = portfolioProjects.find((p) => p.id === id);
+        if (project) {
+          el.textContent = project.description[lang];
+        }
+      });
+
+      // Update html lang attribute
+      document.documentElement.lang = lang;
+    }
+
+    // Listen for language changes from Preact signals
+    function watchLang() {
+      const stored = localStorage.getItem('lang') || 'es';
+      applyTranslations(stored);
+
+      // Poll localStorage for changes from Preact toggle (simple bridge)
+      let lastLang = stored;
+      setInterval(() => {
+        const current = localStorage.getItem('lang') || 'es';
+        if (current !== lastLang) {
+          lastLang = current;
+          applyTranslations(current);
+        }
+      }, 100);
+    }
+
+    // Run on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', watchLang);
+    } else {
+      watchLang();
+    }
+  </script>
+</Layout>

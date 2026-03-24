@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "portfolio": "Portafolio",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "headline": "Transformamos la Presencia Digital de tu Empresa",
+    "subheadline": "Somos expertos en desarrollo web y rediseño digital para empresas del Caribe Mexicano. Llevamos tu marca al siguiente nivel con soluciones modernas y profesionales.",
+    "cta": "Solicita tu Consulta Gratuita"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones digitales integrales para impulsar tu negocio en el mercado local e internacional.",
+    "items": [
+      {
+        "title": "Desarrollo Web",
+        "description": "Sitios web a medida con tecnología de punta. Desde landing pages hasta plataformas complejas con sistemas de reservas, pagos en línea y paneles de administración."
+      },
+      {
+        "title": "Rediseño Digital",
+        "description": "Renovamos por completo la imagen digital de tu empresa. Modernizamos tu sitio web, optimizamos la experiencia del usuario y mejoramos tu posicionamiento."
+      },
+      {
+        "title": "Branding & Identidad",
+        "description": "Creamos una identidad visual que refleja la esencia de tu marca. Diseño de logotipos, paletas de color, tipografías y guías de estilo completas."
+      },
+      {
+        "title": "SEO & Marketing Digital",
+        "description": "Posicionamos tu negocio en los primeros resultados de búsqueda. Estrategias de contenido, optimización técnica y campañas que generan resultados medibles."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Nuestro Portafolio",
+    "subtitle": "Proyectos reales que demuestran nuestra experiencia en diversas industrias del Caribe Mexicano.",
+    "visitSite": "Visitar Sitio"
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Tu aliado digital en el Caribe Mexicano",
+    "mission": "En Caribbean Digital Lab, nuestra misión es transformar la presencia digital de las empresas del Caribe Mexicano, conectándolas con clientes locales e internacionales a través de experiencias web excepcionales.",
+    "story": "Nacimos con la visión de elevar el estándar digital de la región. Con experiencia comprobada en múltiples industrias — desde turismo y hotelería hasta salud y servicios legales — entendemos las necesidades únicas del mercado caribeño y sabemos cómo posicionar tu empresa para competir a nivel global.",
+    "differentiators": [
+      "Experiencia comprobada en el mercado del Caribe Mexicano",
+      "Equipo bilingüe preparado para clientes internacionales",
+      "Tecnología moderna que garantiza rendimiento y seguridad",
+      "Enfoque personalizado para cada proyecto"
+    ]
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "¿Listo para transformar tu presencia digital? Escríbenos y te respondemos en menos de 24 horas.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono (opcional)",
+      "message": "Cuéntanos sobre tu proyecto",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado con éxito! Te contactaremos pronto.",
+      "error": "No pudimos enviar tu mensaje. Por favor, intenta de nuevo o contáctanos por WhatsApp."
+    },
+    "whatsapp": "Escríbenos por WhatsApp",
+    "email": "info@caribbeandigitallab.com",
+    "location": "Cancún, Quintana Roo, México"
+  },
+  "footer": {
+    "copyright": "Caribbean Digital Lab",
+    "rights": "Todos los derechos reservados.",
+    "tagline": "Transformando el Caribe Mexicano, un sitio web a la vez."
+  }
+}

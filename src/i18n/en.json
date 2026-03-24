@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "We Transform Your Business Digital Presence",
+    "subheadline": "We specialize in web development and digital redesign for businesses in the Mexican Caribbean. We take your brand to the next level with modern, professional solutions.",
+    "cta": "Request Your Free Consultation"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive digital solutions to boost your business in local and international markets.",
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Custom-built websites with cutting-edge technology. From landing pages to complex platforms with booking systems, online payments, and admin dashboards."
+      },
+      {
+        "title": "Digital Redesign",
+        "description": "We completely renovate your company's digital image. We modernize your website, optimize user experience, and improve your online positioning."
+      },
+      {
+        "title": "Branding & Identity",
+        "description": "We create a visual identity that reflects your brand's essence. Logo design, color palettes, typography, and complete style guides."
+      },
+      {
+        "title": "SEO & Digital Marketing",
+        "description": "We position your business at the top of search results. Content strategies, technical optimization, and campaigns that deliver measurable results."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Real projects that demonstrate our expertise across diverse industries in the Mexican Caribbean.",
+    "visitSite": "Visit Site"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Your digital partner in the Mexican Caribbean",
+    "mission": "At Caribbean Digital Lab, our mission is to transform the digital presence of businesses in the Mexican Caribbean, connecting them with local and international customers through exceptional web experiences.",
+    "story": "We were born with the vision of elevating the region's digital standard. With proven experience across multiple industries — from tourism and hospitality to healthcare and legal services — we understand the unique needs of the Caribbean market and know how to position your business to compete globally.",
+    "differentiators": [
+      "Proven experience in the Mexican Caribbean market",
+      "Bilingual team ready for international clients",
+      "Modern technology ensuring performance and security",
+      "Personalized approach for every project"
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to transform your digital presence? Write to us and we'll respond within 24 hours.",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone (optional)",
+      "message": "Tell us about your project",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll contact you soon.",
+      "error": "We couldn't send your message. Please try again or contact us via WhatsApp."
+    },
+    "whatsapp": "Message us on WhatsApp",
+    "email": "info@caribbeandigitallab.com",
+    "location": "Cancún, Quintana Roo, México"
+  },
+  "footer": {
+    "copyright": "Caribbean Digital Lab",
+    "rights": "All rights reserved.",
+    "tagline": "Transforming the Mexican Caribbean, one website at a time."
+  }
+}

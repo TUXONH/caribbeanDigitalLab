@@ -1,0 +1,16 @@
+# Deny directory listing
+Options -Indexes
+
+# Only allow POST to contact.php
+<Files "contact.php">
+    <LimitExcept POST>
+        Deny from all
+    </LimitExcept>
+</Files>
+
+# Block direct access to config files
+<FilesMatch "^config\.(php|example\.php)$">
+    <Limit GET>
+        Deny from all
+    </Limit>
+</FilesMatch>

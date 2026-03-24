@@ -1,0 +1,38 @@
+---
+interface Props {
+  icon: string;
+  titleKey: string;
+  descriptionKey: string;
+  titleDefault: string;
+  descriptionDefault: string;
+  delay?: number;
+}
+
+const { icon, titleKey, descriptionKey, titleDefault, descriptionDefault, delay = 0 } = Astro.props;
+---
+
+<div
+  class="animate-on-scroll group rounded-xl border border-navy-900/5 bg-white p-8 shadow-sm transition-all hover:border-gold-500/20 hover:shadow-lg hover:shadow-gold-500/5"
+  style={`transition-delay: ${delay}ms`}
+>
+  <!-- Icon -->
+  <div class="mb-5 inline-flex rounded-lg bg-navy-900/5 p-3 text-navy-900 transition-colors group-hover:bg-gold-500/10 group-hover:text-gold-600">
+    <Fragment set:html={icon} />
+  </div>
+
+  <!-- Title -->
+  <h3
+    class="mb-3 text-xl font-bold text-navy-900"
+    data-i18n={titleKey}
+  >
+    {titleDefault}
+  </h3>
+
+  <!-- Description -->
+  <p
+    class="leading-relaxed text-slate-500"
+    data-i18n={descriptionKey}
+  >
+    {descriptionDefault}
+  </p>
+</div>

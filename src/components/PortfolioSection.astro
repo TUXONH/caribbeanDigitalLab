@@ -1,0 +1,31 @@
+---
+import PortfolioCard from './PortfolioCard.astro';
+import { projects } from '../data/portfolio';
+---
+
+<section id="portfolio" class="bg-white py-24">
+  <div class="mx-auto max-w-7xl px-6">
+    <!-- Header -->
+    <div class="mb-16 text-center">
+      <h2
+        class="mb-4 text-3xl font-bold text-navy-900 sm:text-4xl"
+        data-i18n="portfolio.title"
+      >
+        Nuestro Portafolio
+      </h2>
+      <p
+        class="mx-auto max-w-2xl text-lg text-slate-500"
+        data-i18n="portfolio.subtitle"
+      >
+        Proyectos reales que demuestran nuestra experiencia en diversas industrias del Caribe Mexicano.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project, index) => (
+        <PortfolioCard project={project} delay={index * 100} />
+      ))}
+    </div>
+  </div>
+</section>

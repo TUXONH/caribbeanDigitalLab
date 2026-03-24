@@ -1,0 +1,75 @@
+---
+const differentiators = [
+  {
+    icon: `<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>`,
+    key: 'about.differentiators.0',
+    default: 'Experiencia comprobada en el mercado del Caribe Mexicano',
+  },
+  {
+    icon: `<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" /></svg>`,
+    key: 'about.differentiators.1',
+    default: 'Equipo bilingüe preparado para clientes internacionales',
+  },
+  {
+    icon: `<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>`,
+    key: 'about.differentiators.2',
+    default: 'Tecnología moderna que garantiza rendimiento y seguridad',
+  },
+  {
+    icon: `<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>`,
+    key: 'about.differentiators.3',
+    default: 'Enfoque personalizado para cada proyecto',
+  },
+];
+---
+
+<section id="about" class="bg-navy-900 py-24 text-white">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="grid items-center gap-16 lg:grid-cols-2">
+      <!-- Left: Text -->
+      <div class="animate-on-scroll">
+        <h2
+          class="mb-2 text-3xl font-bold sm:text-4xl"
+          data-i18n="about.title"
+        >
+          Sobre Nosotros
+        </h2>
+        <p
+          class="mb-6 text-lg text-gold-400"
+          data-i18n="about.subtitle"
+        >
+          Tu aliado digital en el Caribe Mexicano
+        </p>
+        <p
+          class="mb-6 leading-relaxed text-white/70"
+          data-i18n="about.mission"
+        >
+          En Caribbean Digital Lab, nuestra misión es transformar la presencia digital de las empresas del Caribe Mexicano, conectándolas con clientes locales e internacionales a través de experiencias web excepcionales.
+        </p>
+        <p
+          class="leading-relaxed text-white/70"
+          data-i18n="about.story"
+        >
+          Nacimos con la visión de elevar el estándar digital de la región. Con experiencia comprobada en múltiples industrias — desde turismo y hotelería hasta salud y servicios legales — entendemos las necesidades únicas del mercado caribeño y sabemos cómo posicionar tu empresa para competir a nivel global.
+        </p>
+      </div>
+
+      <!-- Right: Differentiators -->
+      <div class="animate-on-scroll space-y-6" style="transition-delay: 200ms">
+        {differentiators.map((item) => (
+          <div class="flex items-start gap-4 rounded-lg border border-white/10 bg-white/5 p-5">
+            <div class="flex-shrink-0 text-gold-400">
+              <Fragment set:html={item.icon} />
+            </div>
+            <p
+              class="font-medium text-white/90"
+              data-i18n={item.key}
+            >
+              {item.default}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
